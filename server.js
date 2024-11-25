@@ -220,7 +220,7 @@ function addProduct(req, res) {
 }
 
 // Rotas
-app.get('/', (req, res) => res.sendFile(path.join(publicPath, 'login.html'));
+app.get('/', (req, res) => res.sendFile(path.join(publicPath, 'login.html')));
 app.post('/login', loginHandler);
 app.get('/logout', logoutHandler);
 app.get('/productForm', checkAuthentication, productForm);
