@@ -6,7 +6,9 @@ const app = express();
 
 // Configurações
 app.use(express.urlencoded({ extended: true })); // Para processar dados enviados via formulário
-app.use(express.static('./public')); // Arquivos estáticos, como HTML e CSS
+import path from 'path';
+const publicPath = path.join(__dirname, 'public');
+app.use(express.static(publicPath));
 app.use(cookieParser());
 app.use(
     session({
@@ -218,7 +220,7 @@ function addProduct(req, res) {
 }
 
 // Rotas
-app.get('/', (req, res) => res.redirect('/login.html'));
+app.get('/', (req, res) => res.sendFile(path.join(publicPath, 'login.html'));
 app.post('/login', loginHandler);
 app.get('/logout', logoutHandler);
 app.get('/productForm', checkAuthentication, productForm);
