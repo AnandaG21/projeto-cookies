@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+    body {
+        background-color: #E6E6FA; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .login-container {
+        width: 100%;
+        max-width: 400px;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        color: #0c0c0c;
+    }
+
+    label {
+        font-size: 1.2rem;
+    }
+
+    .btn-primary {
+        width: 100%;
+        background-color: #4B0082;
+        text-align: center;
+    }
+</style>
+</head>
+
+<body>
+<div class="login-container">
+    <form action='/login' method='POST' class="row g-3 needs-validation" novalidate>
+        <fieldset>
+            <h1>Autenticação do Sistema</h1>
+            <div class="col-12">
+                <label for="username" class="form-label">Usuário:</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Digite seu usuário"
+                    required>
+                <div class="invalid-feedback">Por favor, insira seu nome de usuário.</div>
+            </div>
+            <div class="col-12 mt-3">
+                <label for="password" class="form-label">Senha:</label>
+                <input type="password" class="form-control" id="password" name="password"
+                    placeholder="Digite sua senha" required>
+                <div class="invalid-feedback">Por favor, insira sua senha.</div>
+            </div>
+            <div class="col-12 mt-4">
+                <button class="btn btn-primary" type="submit">Entrar</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
